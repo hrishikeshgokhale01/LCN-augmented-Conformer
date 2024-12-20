@@ -1,5 +1,5 @@
 /LibriSpeech
-/openspeech/ctcdecode
+/ctcdecode
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
