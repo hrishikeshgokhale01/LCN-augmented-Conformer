@@ -162,9 +162,9 @@ class ConformerTransducerConfigs(OpenspeechDataclass):
         optimizer (str): Optimizer for training. (default: adam)
     """
     model_name: str = field(default="conformer_transducer", metadata={"help": "Model name"})
-    encoder_dim: int = field(default=512, metadata={"help": "Dimension of encoder."})
-    num_encoder_layers: int = field(default=17, metadata={"help": "The number of encoder layers."})
-    num_attention_heads: int = field(default=8, metadata={"help": "The number of attention heads."})
+    encoder_dim: int = field(default=256, metadata={"help": "Dimension of encoder."})
+    num_encoder_layers: int = field(default=16, metadata={"help": "The number of encoder layers."})
+    num_attention_heads: int = field(default=4, metadata={"help": "The number of attention heads."})
     feed_forward_expansion_factor: int = field(
         default=4, metadata={"help": "The expansion factor of feed forward module."}
     )
@@ -175,7 +175,7 @@ class ConformerTransducerConfigs(OpenspeechDataclass):
     )
     attention_dropout_p: float = field(default=0.1, metadata={"help": "The dropout probability of attention module."})
     conv_dropout_p: float = field(default=0.1, metadata={"help": "The dropout probability of convolution module."})
-    conv_kernel_size: int = field(default=31, metadata={"help": "The kernel size of convolution."})
+    conv_kernel_size: int = field(default=32, metadata={"help": "The kernel size of convolution."})
     half_step_residual: bool = field(
         default=True, metadata={"help": "Flag indication whether to use half step residual or not"}
     )
